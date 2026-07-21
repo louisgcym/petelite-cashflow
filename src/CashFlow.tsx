@@ -240,14 +240,14 @@ export default function CashFlow() {
 
   return (
     <div onClick={() => setEditingId(null)} style={{ minHeight: '100vh', background: '#faf5ff', fontFamily: 'system-ui', color: '#334155' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 24px', background: '#ADE0E0', borderBottom: '1px solid #eee' }}>
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 24px', background: '#F9B8A5', borderBottom: '1px solid #eee' }}>
         <h1 style={{ fontSize: 18, fontWeight: 700, color: '#7e22ce' }}>💊💰 PetElite Pharma Cash Flow Projection</h1>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
           <button onClick={() => setCursor(new Date(year, month - 1, 1))}>◀</button>
           <b>{year}年 {month + 1}月</b>
           <button onClick={() => setCursor(new Date(year, month + 1, 1))}>▶</button>
-          <button onClick={undo} disabled={past.length === 0} style={{ background: past.length ? '#f59e0b' : '#e5e7eb', color: '#fff', border: 0, padding: '6px 12px', borderRadius: 8, cursor: past.length ? 'pointer' : 'not-allowed' }}>↶ 還原{past.length ? ` (${past.length})` : ''}</button>
-          <button onClick={redo} disabled={future.length === 0} style={{ background: future.length ? '#0891b2' : '#e5e7eb', color: '#fff', border: 0, padding: '6px 12px', borderRadius: 8, cursor: future.length ? 'pointer' : 'not-allowed' }}>↷ 反還原{future.length ? ` (${future.length})` : ''}</button>
+          <button onClick={undo} disabled={past.length === 0} style={{ background: past.length ? '#16a34a' : '#e5e7eb', color: '#fff', border: 0, padding: '6px 12px', borderRadius: 8, cursor: past.length ? 'pointer' : 'not-allowed' }}>↶ 還原{past.length ? ` (${past.length})` : ''}</button>
+          <button onClick={redo} disabled={future.length === 0} style={{ background: future.length ? '#16a34a' : '#e5e7eb', color: '#fff', border: 0, padding: '6px 12px', borderRadius: 8, cursor: future.length ? 'pointer' : 'not-allowed' }}>↷ 反還原{future.length ? ` (${future.length})` : ''}</button>
           <button onClick={() => setShowTx(true)} style={{ background: '#7e22ce', color: '#fff', border: 0, padding: '6px 12px', borderRadius: 8, cursor: 'pointer' }}>+ 新增項目</button>
 
 
